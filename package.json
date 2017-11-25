@@ -1,0 +1,51 @@
+{
+  "name": "YoutubeRadio",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "start": "node bin/www",
+    "dev": "./node_modules/.bin/nodemon bin/www",
+    "prd": "pm2 start bin/www",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "axios": "^0.17.1",
+    "babel": "^6.23.0",
+    "babel-core": "^6.26.0",
+    "babel-eslint": "^8.0.2",
+    "babel-loader": "^7.1.2",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-polyfill": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-es2017": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "cheerio": "^1.0.0-rc.2",
+    "debug": "^2.6.3",
+    "koa": "^2.2.0",
+    "koa-bodyparser": "^3.2.0",
+    "koa-convert": "^1.2.0",
+    "koa-json": "^2.0.2",
+    "koa-logger": "^2.0.1",
+    "koa-onerror": "^1.2.1",
+    "koa-passport": "^4.0.1",
+    "koa-router": "^7.1.1",
+    "koa-session": "^5.5.1",
+    "koa-static": "^3.0.0",
+    "koa-views": "^5.2.1",
+    "node-telegram-bot-api": "^0.29.0",
+    "passport-telegram": "^1.0.0",
+    "pug": "^2.0.0-rc.1",
+    "react": "^16.1.1",
+    "react-dom": "^16.1.1",
+    "react-youtube": "^7.5.0",
+    "socket.io": "^2.0.4",
+    "socket.io-client": "^2.0.4",
+    "webpack": "^3.8.1",
+    "youtube-info": "^1.1.2"
+  },
+  "devDependencies": {
+    "eslint": "^4.11.0",
+    "eslint-plugin-react": "^7.5.1",
+    "nodemon": "^1.8.1"
+  }
+}
