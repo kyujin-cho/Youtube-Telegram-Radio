@@ -32,7 +32,7 @@ router.post('/request', async (ctx, next) => {
     }
     */
   
-  if(!youtubeInfo) {
+  if(!youtubeInfo || !youtubeInfo.duration || parseInt(youtubeInfo.duration) > 600) {
     ctx.body = await {
       success: false
     }

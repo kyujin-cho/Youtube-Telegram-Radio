@@ -13,7 +13,7 @@ module.exports = {
 ```
 2. Save config.js
 3. `npm install`
-4. `npm install -g webpack`
-4. `webpack`
-5. `npm start`
+4. `mkdir -r public/javascripts; npm install -g webpack`
+5. `webpack`
+6. `npm start`
 6. Done!
