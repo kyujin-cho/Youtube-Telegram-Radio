@@ -11,3 +11,7 @@ a {
   float: left;
   margin-right: 10px;
 }
+
+.invisible {
+  visibility: hidden;
+}
