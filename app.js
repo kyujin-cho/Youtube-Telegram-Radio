@@ -156,7 +156,7 @@ bot.onText(/\/request (.+)/, async (msg, match) => {
     // send back the matched "whatever" to the chat
     bot.sendMessage(chatId, res.data.data.title + ' 영상이 큐에 추가되었습니다.')
   else
-    bot.sendMessage(chatId, '오류가 발생하였습니다.')
+    bot.sendMessage(chatId, '오류가 발생하였습니다. Error: ' + res.data.error)
 })
 
 

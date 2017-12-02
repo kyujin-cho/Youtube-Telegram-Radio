@@ -11,11 +11,20 @@ router.get('/', async (ctx, next) => {
 
 router.post('/request', async (ctx, next) => {
   console.log(ctx.request.body)
-  const id = ctx.request.body.id.replace('https://www.youtube.com/watch?v=', '').replace('http://www.youtube.com/watch?v=', '').replace('https://youtu.be/', '')
+  const id = ctx.request.body.id.replace('https://www.youtube.com/watch?v=', '').replace('http://www.youtube.com/watch?v=', '').replace('https://youtu.be/', '').split('&')[0]
   const youtubeInfo = await fetchVideoInfo(id)
   if(!youtubeInfo || !youtubeInfo.duration || parseInt(youtubeInfo.duration) > 600) {
     ctx.body = await {
-      success: false
+      success: false,
+      error: 'Not a valid url type'
+    }
+    return
+  }
+  console.log(youtubeInfo)
+  if(youtubeInfo.regionsAllowed.indexOf('KR') == -1) {
+    ctx.body = await {
+      success: false,
+      error: 'This video cannot be played in South Korea!'
     }
     return
   }
